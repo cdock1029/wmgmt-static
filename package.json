@@ -1,0 +1,19 @@
+{
+  "name": "waldon",
+  "version": "1.0.0",
+  "description": "waldon website",
+  "main": "index.js",
+  "author": "Conor Dockry <conordockry@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "NODE_ENV=production next build",
+    "start": "NODE_ENV=production next start"
+  },
+  "dependencies": {
+    "next": "beta",
+    "photoswipe": "^4.1.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+}
