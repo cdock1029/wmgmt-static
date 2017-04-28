@@ -1,8 +1,5 @@
 import React from 'react'
-import Link from 'next/link'
 import Page from '../components/Page'
-
-import PropertyCard from '../components/PropertyCard'
 
 export default class Index extends React.Component {
 
