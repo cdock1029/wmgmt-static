@@ -1,13 +1,14 @@
 const dev = process.env.NODE_ENV !== 'production'
-const { createServer } = require('http')
-const { parse } = require('url')
-const next = require('next')
-const moduleAlias = require('module-alias')
+const moduleAlias = require('module-alias') // eslint-disable-line import/order
 
-if (dev) {
+if (!dev) {
 	moduleAlias.addAlias('react', 'preact-compat')
 	moduleAlias.addAlias('react-dom', 'preact-compat')
 }
+
+const { createServer } = require('http')
+const { parse } = require('url')
+const next = require('next')
 
 const app = next({ dev })
 const handle = app.getRequestHandler()

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Page from '../components/Page'
 
 export default () => (
-	<Page>
+	<Page title='Columbiana Manor'>
 		<div className='columbiana'>
 			<h1>Columbiana</h1>
 		</div>

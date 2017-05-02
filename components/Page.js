@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import Head from 'next/head'
 import Header from '../components/header'
 import Footer from '../components/footer'
@@ -8,6 +7,7 @@ export default class Page extends React.Component {
 
 	render() {
 		const { children, title } = this.props
+		console.log('render Page')
 		return (
 			<div className='grid'>
 				<Head>
@@ -18,7 +18,7 @@ export default class Page extends React.Component {
 						html, body, body > div:first-child, #__next, #__next > div:first-child {
 							width: 100%; height: 100%;
 						}
-						html { font-size: 18px; box-sizing: border-box; }
+						html { font-size: 16px; box-sizing: border-box; }
 						*, *:before, *:after { box-sizing: inherit; }
 						body {
 							margin: 0;
@@ -26,16 +26,18 @@ export default class Page extends React.Component {
 							font-family: -apple-system,BlinkMacSystemFont,Roboto,"Segoe UI","Helvetica Neue",sans-serif;
 							font-family: Futura;
 							-webkit-font-smoothing: antialiased;
+							overflow-y: scroll; /* has to be scroll, not auto */
+							-webkit-overflow-scrolling: touch;
 						}
 					`}</style>
 				</Head>
 				<section className='header'>
 					<Header/>
 				</section>
-				<div className='content grid-item'>
+				<div className='content'>
 					{children}
 				</div>
-				<footer className='footer grid-item'>
+				<footer className='footer'>
 					<Footer/>
 				</footer>
 				<style jsx global>{`
@@ -51,8 +53,6 @@ export default class Page extends React.Component {
 					}
 					.content {
 						grid-area: content;
-						border-left: 1px solid blue;
-						border-right: 1px solid blue;
 					}
 					@media (min-width: 450px) {
 						.grid {
@@ -67,6 +67,11 @@ export default class Page extends React.Component {
 					}
 					.footer {
 						grid-area: footer;
+					}
+					img {
+						border: 1px solid #E1E1E1;
+						border-radius: 5px;
+						margin: 0.5em 0;
 					}
 				`}</style>
 			</div>

@@ -7,15 +7,9 @@ export default class Index extends React.Component {
 		return (
 			<Page title='Waldon Management'>
 				<div className='index'>
-					<section className='stuff'>
-						<h2>stuff.. ugh.</h2>
-					</section>
-					<section className='stuff'>
-						<h2>stuff.. ugh.</h2>
-					</section>
-					<section className='stuff'>
-						<h2>stuff.. ugh.</h2>
-					</section>
+					<img
+						width='100%'
+						src='https://waldon-static-whsnzoxopv.now.sh/westchester_exec_2.JPG'/>
 					<section className='stuff'>
 						<h2>stuff.. ugh.</h2>
 					</section>

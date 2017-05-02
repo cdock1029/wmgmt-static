@@ -20,9 +20,9 @@ export default class Header extends React.Component {
 					<section className='arrow-wrapper' onClick={this.handleToggleShowProperties}>
 						<span>Properties</span>
 						<div className={`menu-arrow${showProperties ? ' toggled' : ''}`}>
-							<svg style={{ fill: 'inherit' }} width='27px' height='14px' viewBox='0 0 27 14' version='1.1' data-reactid='16'>
-								<g id='Page-1' stroke='none' strokeWidth='1' fillRule='evenodd' data-reactid='17'>
-									<polygon id='Arrow' fillRule='nonzero' points='13.4999996 13.9214282 0.6 1.17499997 1.82857139 0.1 13.4999996 11.7714282 25.1714278 0.1 26.3999992 1.17499997' data-reactid='18'/>
+							<svg style={{ fill: 'inherit' }} width='27px' height='14px' viewBox='0 0 27 14' version='1.1'>
+								<g id='Page-1' stroke='none' strokeWidth='1' fillRule='evenodd'>
+									<polygon id='Arrow' fillRule='nonzero' points='13.4999996 13.9214282 0.6 1.17499997 1.82857139 0.1 13.4999996 11.7714282 25.1714278 0.1 26.3999992 1.17499997'/>
 								</g>
 							</svg>
 						</div>
@@ -30,16 +30,15 @@ export default class Header extends React.Component {
 				</div>
 				{showProperties &&
 					<div className='properties-dropdown'>
-						<Link href='/columbiana-manor'><a>columbiana manor</a></Link>
-						<Link href='/newton-commons'><a>newton commons</a></Link>
-						<Link href='/newton-village'><a>newton village</a></Link>
-						<Link href='/niles-executive'><a>niles executive</a></Link>
-						<Link href='/westchester-commons'><a>westchester commons</a></Link>
-						<Link href='/westchester-executive'><a>westchester executive</a></Link>
-						<Link href='/westchester-square'><a>westchester square</a></Link>
+						<Link prefetch href='/columbiana-manor'><a>columbiana manor</a></Link>
+						<Link prefetch href='/newton-commons'><a>newton commons</a></Link>
+						<Link prefetch href='/newton-village'><a>newton village</a></Link>
+						<Link prefetch href='/niles-executive'><a>niles executive</a></Link>
+						<Link prefetch href='/westchester-commons'><a>westchester commons</a></Link>
+						<Link prefetch href='/westchester-executive'><a>westchester executive</a></Link>
+						<Link prefetch href='/westchester-square'><a>westchester square</a></Link>
 						<hr/>
-						<Link href='/contact'><a>Contact</a></Link>
-						<span>Map</span>
+						<Link prefetch href='/contact'><a>contact</a></Link>
 					</div>
 				}
 				<style jsx>{`
@@ -77,9 +76,9 @@ export default class Header extends React.Component {
 						padding: 0.8em 0;
 						display: block;
 					}
-					.properties-dropdown {font-size: 1.1rem;  }
+					.properties-dropdown {font-size: 1.1em;  }
 					@media (min-width: 450px) {
-						.properties-dropdown { font-size: 1.5rem; }
+						.properties-dropdown { font-size: 1.5em; }
 					}
 					.arrow-wrapper {
 						cursor: pointer;
