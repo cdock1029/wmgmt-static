@@ -7,14 +7,13 @@ export default class Page extends React.Component {
 
 	render() {
 		const { children, title } = this.props
-		console.log('render Page')
 		return (
 			<div className='grid'>
 				<Head>
 					<title>{title}</title>
 					<meta charSet='utf-8'/>
 					<meta name='viewport' content='initial-scale=1.0, width=device-width'/>
-					<link rel='stylesheet' href='https://necolas.github.io/normalize.css/latest/normalize.css'/>
+					<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css'/>
 				</Head>
 				<section className='header'>
 					<Header/>
@@ -28,7 +27,6 @@ export default class Page extends React.Component {
 				<style jsx global>{`
 					:root {
 						--gutter-size: 5%;
-						/* --wm-green: #004D40; */
 						--wm-green: #0E5630;
 						--copy-font: Georgia,"Times New Roman",Times,serif;
 					}

@@ -5,34 +5,68 @@ export default class Index extends React.Component {
 
 	render() {
 		return (
-			<Page title='Waldon Management'>
-				<div className='copy stuff'>
-					{/* <img
-						width='100%'
-						src='https://waldon-static-whsnzoxopv.now.sh/westchester_exec_2.JPG'/> */}
-					<p>For 40+ years, Waldon Management has provided experienced rental apartment services for singles, executives, seniors and families up to four people. Our seven apartment centers are situated in natural country settings close to freeway access, close to shopping, dining and banks.</p>
-					<p>We offer a wide variety of apartments including furnished and unfurnished, studio and one to two bedroom apartments with floor plans including efficiencies and handicap accessible units. Our friendly staff will help you find the perfect place to call home in one of our 1500 apartments located in the Youngstown/Warren metropolitan area.</p>
-					<h4 className='call'>Call us today at <wbr/><span className='phone'>1&#8209;877&#8209;353&#8209;RENT</span></h4>
-					<img src='https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyDKoMf5e_-R8DZE1S1RD-tVAHUYt68wJzI&center=41.05%2c%20-80.813132&zoom=10&size=600x400&style=feature:road.arterial|visibility:off&markers=40.8847745,-80.7393949&markers=41.1006321,-80.7690698&markers=41.1789883,-80.7641812&markers=41.1904406,-80.9911556'/>
+			<Page title='Properties'>
+				<div className='index'>
+					<figure>
+						<h4>Westchester Square</h4>
+						<img src='/static/img/westchester/square_thumb.jpg'/>
+						<figcaption>Austintown, OH</figcaption>
+					</figure>
+					<figure>
+						<h4>Westchester Executive</h4>
+						<img src='/static/img/westchester/executive_thumb.jpg'/>
+						<figcaption>Austintown, OH</figcaption>
+					</figure>
+					<figure>
+						<h4>Westchester Commons</h4>
+						<img src='/static/img/westchester/commons_thumb.jpg'/>
+						<figcaption>Austintown, OH</figcaption>
+					</figure>
+					<div className='copy-wrapper'>
+						<p className='copy'>For 40+ years, Waldon Management has provided experienced rental apartment services for singles, executives, seniors and families up to four people. Our seven apartment centers are situated in natural country settings close to freeway access, close to shopping, dining and banks.</p>
+					</div>
+					<figure>
+						<h4>Columbiana Manor</h4>
+						<img src='/static/img/columbiana/thumb.jpg'/>
+						<figcaption>Columbiana, OH</figcaption>
+					</figure>
+					<figure>
+						<h4>Niles Executive</h4>
+						<img src='/static/img/niles/thumb.jpg'/>
+						<figcaption>Niles, OH</figcaption>
+					</figure>
+					<figure>
+						<h4>Newton Village</h4>
+						<img src='/static/img/newtonfalls/village_thumb.jpg'/>
+						<figcaption>Newton Falls, OH</figcaption>
+					</figure>
+					<figure>
+						<h4>Newton Commons</h4>
+						<img src='/static/img/newtonfalls/commons_thumb.jpg'/>
+						<figcaption>Newton Falls, OH</figcaption>
+					</figure>
+					<div className='copy-wrapper'>
+						<p className='copy'>We offer a wide variety of apartments including furnished and unfurnished, studio and one to two bedroom apartments with floor plans including efficiencies and handicap accessible units. Our friendly staff will help you find the perfect place to call home in one of our 1500 apartments located in the Youngstown/Warren metropolitan area.</p>
+					</div>
 				</div>
 				<style jsx>{`
-					.stuff {
+					.index {
 						display: flex;
-						flex-direction: column;
-						justify-content: center;
-						align-items: center;
-						padding: 1em;
+						flex-direction: row;
+						justify-content: space-around;
+						flex-wrap: wrap;
+						padding: 0.5em;
 					}
-					.call {
-						font-family: Futura, sans-serif;
-						text-align: center;
-						line-height: 1.5em;
-					}
-					.call .phone {
-						text-decoration: underline;
-					}
-					img {
-						max-width: 100%;
+					p { padding: 0 0.5em; max-width: 42em; margin-left: auto; margin-right: auto; }
+					.copy-wrapper { width: 100%; margin: 1em 0 0 0; }
+					figure { margin: 0.5em; }
+					figcaption { font-size: 0.8em; }
+					img { max-width: 100%; margin: auto; }
+					@media (max-width: 500px) {
+						figure {
+							width: 100%;
+						}
+						img { width: 100%; }
 					}
 				`}</style>
 			</Page>
