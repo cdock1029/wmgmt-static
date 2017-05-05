@@ -1,5 +1,12 @@
 import Router from 'next/router'
 
+const locations = {
+	'/': { name: '', street: '', cityStateZip: '' },
+	'/westchester-commons': { name: 'Westchester Commons Apts.', street: '', cityStateZip: '' },
+	'/westchester-executive': { name: 'Westchester Executive Apts.', street: '', cityStateZip: '' },
+	'/westchester-square': { name: 'Westchester Square Apts.', street: '', cityStateZip: '' },
+}
+
 export default props => {
 	let content
 	// switch (Router.pathname) {
@@ -19,8 +26,12 @@ export default props => {
 	console.log('footer props', props)
 	return (
 		<div className='footer'>
-			<h5>Address</h5>
-			<p>{content || 'TODO FIX'}</p>
+			<address>
+				<span className='company-name'>Waldon Management Corp.</span><br/>
+				111 Westchester Drive<br/>
+				Austintown, OH 44515<br/>
+				USA
+			</address>
 			<style jsx>{`
 				.footer {
 					display: flex;
@@ -28,8 +39,18 @@ export default props => {
 					justify-content: center;
 					align-items: center;
 					padding: 1em;
-					color: #fff;
-					background-color: darkgreen;
+
+				}
+				address {
+					font-size: 0.7em;
+					margin: 1em 0;
+					font-style: normal;
+					font-family: -apple-system,BlinkMacSystemFont,Roboto,"Segoe UI","Helvetica Neue",sans-serif;
+				}
+				.company-name {
+					font-family: Futura,-apple-system,BlinkMacSystemFont,Roboto,"Segoe UI","Helvetica Neue",sans-serif;
+					font-weight: bold;
+					line-height: 1.8em;
 				}
 			`}</style>
 		</div>

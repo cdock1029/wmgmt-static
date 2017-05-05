@@ -17,7 +17,10 @@ export default class Header extends React.Component {
 					<section className='brand'>
 						<Link href='/'><a>Waldon MGMT</a></Link>
 					</section>
-					<section className='arrow-wrapper' onClick={this.handleToggleShowProperties}>
+					<section>
+						<Link href='/contact'><a>Contact Us</a></Link>
+					</section>
+					{/* <section className='arrow-wrapper' onClick={this.handleToggleShowProperties}>
 						<span>Properties</span>
 						<div className={`menu-arrow${showProperties ? ' toggled' : ''}`}>
 							<svg style={{ fill: 'inherit' }} width='27px' height='14px' viewBox='0 0 27 14' version='1.1'>
@@ -26,17 +29,11 @@ export default class Header extends React.Component {
 								</g>
 							</svg>
 						</div>
-					</section>
+					</section> */}
 				</div>
 				{showProperties &&
 					<div className='properties-dropdown'>
-						<Link prefetch href='/columbiana-manor'><a>columbiana manor</a></Link>
-						<Link prefetch href='/newton-commons'><a>newton commons</a></Link>
-						<Link prefetch href='/newton-village'><a>newton village</a></Link>
-						<Link prefetch href='/niles-executive'><a>niles executive</a></Link>
-						<Link prefetch href='/westchester-commons'><a>westchester commons</a></Link>
-						<Link prefetch href='/westchester-executive'><a>westchester executive</a></Link>
-						<Link prefetch href='/westchester-square'><a>westchester square</a></Link>
+						<Link prefetch href='/properties'><a>properties</a></Link>
 						<hr/>
 						<Link prefetch href='/contact'><a>contact</a></Link>
 					</div>
@@ -47,8 +44,9 @@ export default class Header extends React.Component {
 						justify-content: space-between;
 						align-items: center;
 						/* margin: 0 4%; */
-						padding: 1em 4%;
-						border-bottom: 1px solid rgba(0,0,0,0.1);
+						padding: 1em var(--gutter-size);
+						/* border-bottom: 1px solid rgba(0,0,0,0.1); */
+						 border-bottom: 1px solid rgba(0,0,0,0.5);
 					}
 					.brand {
 						font-weight: bold;
@@ -68,7 +66,7 @@ export default class Header extends React.Component {
 						border-bottom: 1px solid #777a;
 					}
 					a {
-						color: #000;
+						color: inherit;
 						text-decoration: none;
 						text-transform: uppercase;
 					}
@@ -77,9 +75,7 @@ export default class Header extends React.Component {
 						display: block;
 					}
 					.properties-dropdown {font-size: 1.1em;  }
-					@media (min-width: 450px) {
-						.properties-dropdown { font-size: 1.5em; }
-					}
+
 					.arrow-wrapper {
 						cursor: pointer;
 					}
