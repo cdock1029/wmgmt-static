@@ -6,7 +6,7 @@ export default () => {
 				<span className='company-name'>Waldon Management Corp.</span><br/>
 				111 Westchester Drive<br/>
 				Austintown, OH 44515<br/>
-				USA
+				<a href='tel:+13307927688'>(330) 792-7688</a>
 			</address>
 			<style jsx>{`
 				.footer {
@@ -19,14 +19,19 @@ export default () => {
 				}
 				address {
 					font-size: 0.7em;
-					margin: 1em 0;
+					/* margin: 1em 0; */
 					font-style: normal;
 					font-family: -apple-system,BlinkMacSystemFont,Roboto,"Segoe UI","Helvetica Neue",sans-serif;
+				}
+				address a {
+					text-decoration: none;
+					color: inherit;
+					line-height: 1.7em;
 				}
 				.company-name {
 					font-family: Futura,-apple-system,BlinkMacSystemFont,Roboto,"Segoe UI","Helvetica Neue",sans-serif;
 					font-weight: bold;
-					line-height: 1.8em;
+					line-height: 1.7em;
 				}
 			`}</style>
 		</div>

@@ -10,6 +10,7 @@ export default class Page extends React.Component {
 		return (
 			<div className='grid'>
 				<Head>
+					<meta name='google-site-verification' content='cxmREwyc3lrU6Anm3tDHdDpCC8GfFEFJS6BQ_hVDv0A'/>
 					<title>{title}</title>
 					<meta charSet='utf-8'/>
 					<meta name='viewport' content='initial-scale=1.0, width=device-width'/>

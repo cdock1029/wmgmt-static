@@ -5,42 +5,42 @@ export default class Index extends React.Component {
 
 	render() {
 		return (
-			<Page title='Properties'>
+			<Page title='Waldon Mgmt. Apartments in Northeast Ohio'>
 				<div className='index'>
-					<figure>
+					<figure id='westchester-square-apartments'>
 						<h4>Westchester Square</h4>
 						<img src='/static/img/westchester/square_thumb.jpg'/>
 						<figcaption>Austintown, OH</figcaption>
 					</figure>
-					<figure>
+					<figure id='westchester-executive-apartments'>
 						<h4>Westchester Executive</h4>
 						<img src='/static/img/westchester/executive_thumb.jpg'/>
 						<figcaption>Austintown, OH</figcaption>
 					</figure>
-					<figure>
+					<figure id='westchester-commons-apartments'>
 						<h4>Westchester Commons</h4>
 						<img src='/static/img/westchester/commons_thumb.jpg'/>
 						<figcaption>Austintown, OH</figcaption>
 					</figure>
 					<div className='copy-wrapper'>
-						<p className='copy'>For 40+ years, Waldon Management has provided experienced rental apartment services for singles, executives, seniors and families up to four people. Our seven apartment centers are situated in natural country settings close to freeway access, close to shopping, dining and banks.</p>
+						<p className='copy'>For 40+ years, Waldon Management has provided experienced rental apartment services for singles, executives, seniors and families up to four people. Our seven apartment properties in northeast Ohio, are situated in natural country settings close to freeway access, close to shopping, dining and banks.</p>
 					</div>
-					<figure>
+					<figure id='columbiana-manor-apartments'>
 						<h4>Columbiana Manor</h4>
 						<img src='/static/img/columbiana/thumb.jpg'/>
 						<figcaption>Columbiana, OH</figcaption>
 					</figure>
-					<figure>
+					<figure id='niles-executive-apartments'>
 						<h4>Niles Executive</h4>
 						<img src='/static/img/niles/thumb.jpg'/>
 						<figcaption>Niles, OH</figcaption>
 					</figure>
-					<figure>
+					<figure id='newton-village-apartments'>
 						<h4>Newton Village</h4>
 						<img src='/static/img/newtonfalls/village_thumb.jpg'/>
 						<figcaption>Newton Falls, OH</figcaption>
 					</figure>
-					<figure>
+					<figure id='newton-commons-apartments'>
 						<h4>Newton Commons</h4>
 						<img src='/static/img/newtonfalls/commons_thumb.jpg'/>
 						<figcaption>Newton Falls, OH</figcaption>

@@ -1,5 +1,6 @@
 const dev = process.env.NODE_ENV !== 'production'
 const moduleAlias = require('module-alias') // eslint-disable-line import/order
+const join = require('path').join
 
 if (!dev) {
 	moduleAlias.addAlias('react', 'preact-compat')
@@ -17,7 +18,13 @@ app.prepare()
 	.then(() => {
 		createServer((req, res) => {
 			const parsedUrl = parse(req.url, true)
-			handle(req, res, parsedUrl)
+			const rootStaticFiles = { '/googleab6bbbacf5b51a92.html': true }
+			if (rootStaticFiles[parsedUrl.pathname]) {
+				const path = join(__dirname, 'static', parsedUrl.pathname)
+				app.serveStatic(req, res, path)
+			} else {
+				handle(req, res, parsedUrl)
+			}
 		}).listen(3000, err => {
 			if (err) {
 				throw err
