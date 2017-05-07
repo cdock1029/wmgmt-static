@@ -2,7 +2,7 @@ import React from 'react'
 import Page from '../components/Page'
 
 export default () => (
-	<Page title='Contact Us to Schedule Apt. Tour'>
+	<Page title='Contact Us to Schedule Apartment Tour'>
 		<div className='contact'>
 			<h3>Contact Us</h3>
 			<table>

@@ -5,7 +5,7 @@ export default class Index extends React.Component {
 
 	render() {
 		return (
-			<Page title='Waldon Mgmt. Apartments in Northeast Ohio'>
+			<Page title='Waldon Management Apartments in Northeast Ohio'>
 				<div className='index'>
 					<figure id='westchester-square-apartments'>
 						<h4>Westchester Square</h4>

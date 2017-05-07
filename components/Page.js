@@ -1,9 +1,24 @@
 import React from 'react'
 import Head from 'next/head'
+import ReactGA from 'react-ga'
 import Header from '../components/header'
 import Footer from '../components/footer'
 
+if (typeof window !== 'undefined') {
+	ReactGA.initialize('UA-98693854-1')
+}
+
 export default class Page extends React.Component {
+
+	constructor(props) {
+		super(props)
+		if (typeof window !== 'undefined') {
+			if (window.location.hostname !== 'localhost') {
+				ReactGA.set({ page: window.location.pathname + window.location.search })
+				ReactGA.pageview(window.location.pathname + window.location.search)
+			}
+		}
+	}
 
 	render() {
 		const { children, title } = this.props

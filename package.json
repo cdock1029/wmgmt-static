@@ -17,7 +17,8 @@
     "preact": "^8.1.0",
     "preact-compat": "^3.16.0",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "react-ga": "^2.2.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
@@ -30,7 +31,7 @@
   "now": {
     "alias": [
       "waldonmanagement.com",
-			"www.waldonmanagement.com"
+      "www.waldonmanagement.com"
     ]
   },
   "xo": {
