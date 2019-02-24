@@ -2215,9 +2215,9 @@ eslint-plugin-ava@^5.1.0:
     multimatch "^2.1.0"
     pkg-up "^2.0.0"
 
-eslint-plugin-class-property@1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-class-property/-/eslint-plugin-class-property-1.0.6.tgz#c3bc3fc4207b283bf82e69e3dd1b6e2491a57623"
+eslint-plugin-class-property@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-class-property/-/eslint-plugin-class-property-1.1.0.tgz#355784133d4852b8870bd1cb429a1b0403cc7aef"
   dependencies:
     eslint "^3.19.0"
 
